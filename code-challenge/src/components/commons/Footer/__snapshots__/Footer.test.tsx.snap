@@ -2,7 +2,7 @@
 
 exports[`Footer component should render correctly UI 1`] = `
 <div
-  className="footer"
+  className="main-footer"
 >
   <p>
     Created by Nhi Tran

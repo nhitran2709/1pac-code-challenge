@@ -2,7 +2,7 @@
 import React, { memo } from 'react';
 
 const Footer = () => (
-  <div className="footer">
+  <div className="main-footer">
     <p>Created by Nhi Tran</p>
   </div>
 );
