@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screens component should render correctly UI 1`] = `
+<Memo(MainLayout)>
+  <Memo(HomeScreen) />
+</Memo(MainLayout)>
+`;

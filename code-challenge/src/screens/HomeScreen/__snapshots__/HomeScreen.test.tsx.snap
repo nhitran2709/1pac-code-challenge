@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen component should render correctly UI 1`] = `
+<Memo(Form)
+  onHandleChange={[Function]}
+  onHandleSubmit={[Function]}
+  value=""
+/>
+`;
