@@ -1,0 +1,8 @@
+/* Define common styles for elements*/
+.app {
+  background-color: $bg-primary;
+  padding: pxToRem(15px);
+  font-family: $font-base-regular;
+  font-size: $font-size-md;
+  color: $text-primary;
+}

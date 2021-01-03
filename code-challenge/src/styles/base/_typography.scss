@@ -1,0 +1,13 @@
+/* Variable for font-size */
+$font-size-xxs: pxToRem(12px);
+$font-size-xs: pxToRem(14px);
+$font-size-sm: pxToRem(16px);
+$font-size-md: pxToRem(18px);
+$font-size-lg: pxToRem(24px);
+$font-size-xl: pxToRem(32px);
+
+/* fonts family */
+$font-base-bold: 'Lora Bold';
+$font-base-regular: 'Lora Regular';
+$font-base-medium: 'Lora Medium';
+$font-base-light: 'Lora Light';
