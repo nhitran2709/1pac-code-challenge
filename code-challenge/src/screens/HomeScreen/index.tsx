@@ -7,7 +7,7 @@ import Form from 'components/commons/Form';
 const HomeScreen = () => {
   const [searchValue, setSearchValue] = useState('');
 
-  const handleChange = (e: any) => {
+  const handleChange = (e) => {
     const { value } = e.target;
     console.log('value', value);
     if (value !== '') {

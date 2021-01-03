@@ -2,6 +2,7 @@
 
 exports[`MainLayout component should render correctly UI 1`] = `
 <Fragment>
+  <Header />
   <p>
     test
   </p>

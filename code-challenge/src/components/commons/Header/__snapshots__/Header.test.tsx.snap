@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should render correctly UI 1`] = `
+<header
+  className="main-header"
+>
+  <h1>
+    <a
+      className="main-header__link"
+      href="/"
+    >
+      Images nasa gov
+    </a>
+  </h1>
+</header>
+`;

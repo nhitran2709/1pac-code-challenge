@@ -1,0 +1,12 @@
+/* Define layout for section Header */
+.main-header {
+  padding: pxToRem(40px) 0;
+  text-decoration: none;
+  font-family: $font-base-bold;
+  font-size: $font-size-lg;
+
+  &__link {
+    color: $light-blue;
+    text-decoration: none;
+  }
+}
