@@ -3,9 +3,9 @@ import React, { memo } from 'react';
 import isEqual from 'react-fast-compare';
 
 type Props = {
-  // eslint-disable-next-line no-unused-vars
   value: string,
-  onHandleChange: (e: any) => void,
+  // eslint-disable-next-line no-unused-vars
+  onHandleChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
   onHandleSubmit: () => void,
 }
 
