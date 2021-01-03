@@ -4,6 +4,7 @@ import isEqual from 'react-fast-compare';
 
 // Components
 import Footer from 'components/commons/Footer';
+import Header from 'components/commons/Header';
 
 type Props = {
   children: React.ReactNode
@@ -11,6 +12,7 @@ type Props = {
 
 const MainLayout = ({ children }: Props) => (
   <>
+    <Header />
     {children}
     <Footer />
   </>
