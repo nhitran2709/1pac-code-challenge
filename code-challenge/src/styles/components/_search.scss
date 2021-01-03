@@ -1,0 +1,18 @@
+/* Define styles for SearchGroup */
+.search {
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+
+  &__input {
+    max-width: pxToRem(200px);
+    width: 100%;
+    font-size: $font-size-xs;
+    text-transform: capitalize;
+
+    border: pxToRem(1px) solid $light-blue;
+    border-radius: pxToRem(4px);
+    padding: pxToRem(15px);
+    margin-left: pxToRem(5px);
+  }
+}
