@@ -1,0 +1,56 @@
+/* Define style for Card component */
+.card {
+  max-width: pxToRem(330px);
+  width: 100%;
+  text-align: center;
+  background-color: $gray;
+  border-radius: pxToRem(8px);
+  padding: pxToRem(15px);
+  margin: pxToRem(20px) 0;
+
+  &__image-wrapper,
+  &__image,
+  &__info-wrapper {
+    width: 100%;
+  }
+
+  &__image-wrapper {
+    margin: pxToRem(10px) 0;
+  }
+
+  &__image {
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+  }
+
+  &__info-wrapper {
+    width: 100%;
+  }
+
+  &__title {
+    padding: pxToRem(10px) 0;
+    font-size: $font-size-md;
+    font-family: $font-base-bold;
+    text-transform: capitalize;
+  }
+
+  .link {
+    &:hover {
+      color: $dark-blue;
+      text-decoration: underline;
+    }
+  }
+
+  &__description {
+    margin: pxToRem(10px) 0;
+    font-size: $font-size-sm;
+    font-family: $font-base-light;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
