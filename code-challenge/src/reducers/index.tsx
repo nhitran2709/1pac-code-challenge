@@ -2,9 +2,10 @@
 import { combineReducers } from 'redux';
 
 // Reducers
+import searchingImage from 'reducers/searchingImage';
 
 const appReducers = combineReducers({
-  // All reducers in here
+  searchingImage,
 });
 
 const rootReducers = (state: any, action: any) => appReducers(state, action);
