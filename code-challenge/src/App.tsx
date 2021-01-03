@@ -1,12 +1,18 @@
 // Libs
 import React from 'react';
+import { Provider } from 'react-redux';
 
-// Screens
+// Store
+import store from 'store';
+
+// Screen
 import Screens from 'screens';
 
 const App = () => (
   <div className="app">
-    <Screens />
+    <Provider store={store}>
+      <Screens />
+    </Provider>
   </div>
 );
 

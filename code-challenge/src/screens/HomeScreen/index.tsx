@@ -1,5 +1,6 @@
 // Libs
 import React, { memo, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 // Constants
 import {
@@ -7,23 +8,37 @@ import {
   IMAGE_TITLE, IMAGE_URL,
 } from 'constants/dataMock';
 
+// Actions
+import * as searchingActions from 'actions/searching';
+
 // Components
 import Form from 'components/commons/Form';
 import CardImage from 'components/commons/CardImage';
+import ErrorMessage from 'components/commons/ErrorMessage';
 
 const HomeScreen = () => {
+  const dispatch = useDispatch();
+  const searchingImage = useSelector((state: any) => state.searchingImage);
+  const { isSearchingImgLoading, searchingImgError, imageData } = searchingImage;
+  console.log('searchingImage', searchingImage);
+  console.log('isSearchingImgLoading', isSearchingImgLoading);
+  console.log('imageData', imageData);
+
   const [searchValue, setSearchValue] = useState('');
 
   const handleChange = (e) => {
     const { value } = e.target;
-    console.log('value', value);
+
     if (value !== '') {
       setSearchValue(value.trim());
     }
   };
 
-  const handleSubmit = () => {
-    console.log('submit');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (searchValue) {
+      dispatch(searchingActions.getImageSearchingRequest(searchValue));
+    }
   };
 
   const handleClickImage = () => {
@@ -40,13 +55,17 @@ const HomeScreen = () => {
         />
       </section>
       <section className="card-group">
-        <CardImage
-          altImage="image"
-          imageUrl={IMAGE_URL}
-          title={IMAGE_TITLE}
-          description={IMAGE_DESCRIPTION}
-          onHandleClick={handleClickImage}
-        />
+        {searchingImgError
+          ? <ErrorMessage message={searchingImgError} />
+          : (
+            <CardImage
+              altImage="image"
+              imageUrl={IMAGE_URL}
+              title={IMAGE_TITLE}
+              description={IMAGE_DESCRIPTION}
+              onHandleClick={handleClickImage}
+            />
+          )}
       </section>
     </div>
   );

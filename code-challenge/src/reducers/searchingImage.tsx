@@ -1,4 +1,7 @@
-// import { formatUserData } from 'helpers/formatData';
+// Helpers
+import formatSearchingImage from 'helpers/formatData';
+
+// Actions
 import * as Actions from 'actions/searching';
 
 export const initialState = {
@@ -20,12 +23,14 @@ const searchingImage = (state = initialState, action: any) => {
       };
 
     case Actions.GET_IMAGE_SEARCHING_SUCCESS:
+      // eslint-disable-next-line no-case-declarations
+      const test = formatSearchingImage(data);
       return {
         ...state,
         type,
         isSearchingImgLoading: false,
-        imageData: data,
-        userError: initialState.searchingImgError,
+        imageData: formatSearchingImage(data),
+        searchingImgError: initialState.searchingImgError,
       };
 
     case Actions.GET_IMAGE_SEARCHING_FAILED:
@@ -33,7 +38,7 @@ const searchingImage = (state = initialState, action: any) => {
         ...state,
         type,
         isSearchingImgLoading: false,
-        userError: errors.message,
+        searchingImgError: errors.message,
       };
 
     default:
