@@ -5,8 +5,9 @@ import isEqual from 'react-fast-compare';
 type Props = {
   value: string,
   // eslint-disable-next-line no-unused-vars
-  onHandleChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
-  onHandleSubmit: () => void,
+  onHandleChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
+  // eslint-disable-next-line no-unused-vars
+  onHandleSubmit: (e) => void,
 }
 
 const Form = ({ onHandleChange, value, onHandleSubmit }: Props) => (
