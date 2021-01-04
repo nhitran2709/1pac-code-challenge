@@ -23,8 +23,6 @@ const searchingImage = (state = initialState, action: any) => {
       };
 
     case Actions.GET_IMAGE_SEARCHING_SUCCESS:
-      // eslint-disable-next-line no-case-declarations
-      const test = formatSearchingImage(data);
       return {
         ...state,
         type,

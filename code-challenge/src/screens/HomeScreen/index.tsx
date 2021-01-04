@@ -2,12 +2,6 @@
 import React, { memo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-// Constants
-import {
-  IMAGE_DESCRIPTION,
-  IMAGE_TITLE, IMAGE_URL,
-} from 'constants/dataMock';
-
 // Actions
 import * as searchingActions from 'actions/searching';
 
@@ -19,13 +13,14 @@ import ErrorMessage from 'components/commons/ErrorMessage';
 const HomeScreen = () => {
   const dispatch = useDispatch();
   const searchingImage = useSelector((state: any) => state.searchingImage);
-  const { isSearchingImgLoading, searchingImgError, imageData } = searchingImage;
-  console.log('searchingImage', searchingImage);
-  console.log('isSearchingImgLoading', isSearchingImgLoading);
-  console.log('imageData', imageData);
+  const { searchingImgError, imageData } = searchingImage;
 
   const [searchValue, setSearchValue] = useState('');
 
+  /**
+   * handleChange: Function handle on change of searching input
+   * @param e Event
+   */
   const handleChange = (e) => {
     const { value } = e.target;
 
@@ -34,6 +29,10 @@ const HomeScreen = () => {
     }
   };
 
+  /**
+   * handleSubmit: Function handle submit searching form
+   * @param e Event
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchValue) {
@@ -41,6 +40,9 @@ const HomeScreen = () => {
     }
   };
 
+  /**
+   * handleClickImage: Function handle click on a image
+   */
   const handleClickImage = () => {
     console.log('click');
   };
@@ -54,18 +56,22 @@ const HomeScreen = () => {
           onHandleSubmit={handleSubmit}
         />
       </section>
-      <section className="card-group">
+      <section className={!imageData.length ? 'card-group__no-data' : 'card-group'}>
         {searchingImgError
           ? <ErrorMessage message={searchingImgError} />
-          : (
+          : !!imageData.length && imageData.map(({
+            nasaId, description, title, imageUrl,
+          }) => (
             <CardImage
-              altImage="image"
-              imageUrl={IMAGE_URL}
-              title={IMAGE_TITLE}
-              description={IMAGE_DESCRIPTION}
+              key={nasaId}
+              altImage={nasaId}
+              imageUrl={imageUrl}
+              title={title}
+              description={description}
               onHandleClick={handleClickImage}
             />
-          )}
+          ))}
+        { !imageData.length && !searchingImgError && <p>There is no data </p>}
       </section>
     </div>
   );

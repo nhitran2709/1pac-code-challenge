@@ -35,6 +35,7 @@ describe('Authentication reducers', () => {
         message: 'Error',
       },
     };
+
     expect(reducer(initialState, startAction).searchingImgError.message).toEqual(
       startAction.errors.message,
     );

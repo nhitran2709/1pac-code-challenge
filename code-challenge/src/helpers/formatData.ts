@@ -8,10 +8,7 @@ import { ImageType } from 'models/image';
 const formatSearchingImage = (imageData: any) => {
   const { collection } = imageData;
   const { items } = collection;
-  console.log('items', items);
-
   const images: ImageType[] = [];
-  console.log('images-------', images);
 
   if (items && items.length) {
     let info: ImageType;
@@ -22,11 +19,9 @@ const formatSearchingImage = (imageData: any) => {
       if (links && links !== undefined && links.length) {
         const link = links[0];
         const { href } = link;
-        console.log('href-----', href);
 
         info = { ...info, imageUrl: href };
       } else {
-        console.log('------link');
         info = { ...info, imageUrl: '' };
       }
 
@@ -49,7 +44,7 @@ const formatSearchingImage = (imageData: any) => {
       return images.push(...images, info);
     });
   }
-  // return images;
+  return images;
 };
 
 export default formatSearchingImage;
