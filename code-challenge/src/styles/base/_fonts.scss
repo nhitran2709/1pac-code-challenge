@@ -1,0 +1,20 @@
+/* Include font face */
+@font-face {
+  font-family: $font-base-bold;
+  src: url('../../assets/fonts/Lora-Bold.ttf');
+}
+
+@font-face {
+  font-family: $font-base-light;
+  src: url('../../assets/fonts/Lora-Italic.ttf');
+}
+
+@font-face {
+  font-family: $font-base-medium;
+  src: url('../../assets/fonts/Lora-Medium.ttf');
+}
+
+@font-face {
+  font-family: $font-base-regular;
+  src: url('../../assets/fonts/Lora-Regular.ttf');
+}

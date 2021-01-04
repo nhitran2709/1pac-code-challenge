@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component should render correctly UI 1`] = `
+<div
+  className="main-footer"
+>
+  <p>
+    Created by Nhi Tran
+  </p>
+</div>
+`;

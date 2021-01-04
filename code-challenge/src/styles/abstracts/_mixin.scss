@@ -1,0 +1,22 @@
+/*
+* function: pxToRem
+* Used to convert unit 'px' to 'rem'
+*/
+@function pxToRem($child, $parent: 16px) {
+  @if (unitless($child)) {
+    $child: $child * 1px;
+  }
+  @if (unitless($parent)) {
+    $parent: $parent * 1px;
+  }
+  @return $child / $parent * 1rem;
+}
+
+// Mixin for absolute position
+@mixin absolute-position($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

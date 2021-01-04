@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form component should render correctly UI 1`] = `
+<div
+  className="search"
+>
+  <form
+    className="search__form"
+    onSubmit={[MockFunction]}
+  >
+    <input
+      className="search__input"
+      id="searchImage"
+      onChange={[MockFunction]}
+      placeholder="Enter the content to search"
+      type="text"
+      value="search value"
+    />
+  </form>
+</div>
+`;

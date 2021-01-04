@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardImage component should render correctly UI 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card__image-wrapper"
+  >
+    <img
+      alt="Image nasa"
+      className="card__image"
+      src="https://images-assets.nasa.gov/video/The%20Journeys%20of%20Apollo/The%20Journeys%20of%20Apollo~medium_5.jpg"
+    />
+  </div>
+  <div
+    className="card__info-wrapper"
+  >
+    <h2
+      className="card__title"
+    >
+      <a
+        className="link"
+        href="/"
+        onClick={[MockFunction]}
+      >
+        Image nasa
+      </a>
+    </h2>
+    <p
+      className="card__description"
+    >
+      Description
+    </p>
+  </div>
+</div>
+`;

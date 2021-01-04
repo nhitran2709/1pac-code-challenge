@@ -1,0 +1,12 @@
+/* Define style for Card layout */
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 pxToRem(30px);
+
+  &__no-data {
+    display: flex;
+    justify-content: center;
+  }
+}
